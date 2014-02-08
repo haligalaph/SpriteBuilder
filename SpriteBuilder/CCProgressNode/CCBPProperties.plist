@@ -3,19 +3,19 @@
 <plist version="1.0">
 <dict>
 	<key>ordering</key>
-	<integer>6000</integer>
+	<integer>100000</integer>
 	<key>displayName</key>
-	<string>Sprite</string>
+	<string>Progress Node</string>
 	<key>description</key>
-	<string>Displays a texture.</string>
+	<string>Displays a sprite with a progressive reveal.</string>
 	<key>inheritsFrom</key>
 	<string>CCNode</string>
 	<key>canHaveChildren</key>
-	<true/>
+	<false/>
 	<key>canBeRootNode</key>
-	<true/>
+	<false/>
 	<key>className</key>
-	<string>CCSprite</string>
+	<string>CCProgressNode</string>
 	<key>spriteFrameDrop</key>
 	<dict>
 		<key>className</key>
@@ -24,7 +24,7 @@
 		<string>spriteFrame</string>
 	</dict>
 	<key>editorClassName</key>
-	<string>CCSprite</string>
+	<string>CCBPProgressNode</string>
 	<key>propertiesOverridden</key>
 	<array>
 		<dict>
@@ -51,8 +51,6 @@
 			<true/>
 		</dict>
 		<dict>
-			<key>animatable</key>
-			<true/>
 			<key>default</key>
 			<array>
 				<string></string>
@@ -71,10 +69,10 @@
 			<string>spriteFrame</string>
 		</dict>
 		<dict>
-			<key>defaultSerialization</key>
-			<integer>1</integer>
 			<key>animatable</key>
 			<true/>
+			<key>defaultSerialization</key>
+			<integer>1</integer>
 			<key>displayName</key>
 			<string>Opacity</string>
 			<key>type</key>
@@ -83,33 +81,20 @@
 			<string>opacity</string>
 		</dict>
 		<dict>
+			<key>animatable</key>
+			<true/>
 			<key>defaultSerialization</key>
 			<array>
 				<integer>255</integer>
 				<integer>255</integer>
 				<integer>255</integer>
 			</array>
-			<key>animatable</key>
-			<true/>
 			<key>displayName</key>
 			<string>Color</string>
 			<key>type</key>
 			<string>Color3</string>
 			<key>name</key>
 			<string>color</string>
-		</dict>
-		<dict>
-			<key>defaultSerialization</key>
-			<array>
-				<false/>
-				<false/>
-			</array>
-			<key>displayName</key>
-			<string></string>
-			<key>type</key>
-			<string>Flip</string>
-			<key>name</key>
-			<string>flip</string>
 		</dict>
 		<dict>
 			<key>defaultSerialization</key>
@@ -123,6 +108,74 @@
 			<string>Blendmode</string>
 			<key>name</key>
 			<string>blendFunc</string>
+		</dict>
+		<dict>
+			<key>displayName</key>
+			<string>CCProgressNode</string>
+			<key>name</key>
+			<string>CCProgressNode</string>
+			<key>type</key>
+			<string>Separator</string>
+			<key>dontSetInEditor</key>
+			<true/>
+		</dict>
+		<dict>
+			<key>defaultSerialization</key>
+			<false/>
+			<key>displayName</key>
+			<string>Reverse direction</string>
+			<key>type</key>
+			<string>Check</string>
+			<key>name</key>
+			<string>reverseDirection</string>
+		</dict>
+		<dict>
+			<key>defaultSerialization</key>
+			<integer>0</integer>
+			<key>displayName</key>
+			<string>Type</string>
+			<key>type</key>
+			<string>IntegerLabeled</string>
+			<key>name</key>
+			<string>type</string>
+			<key>extra</key>
+			<string>Radial|0|Bar|1</string>
+		</dict>
+		<dict>
+			<key>defaultSerialization</key>
+			<array>
+				<real>0.5</real>
+				<real>0.5</real>
+			</array>
+			<key>displayName</key>
+			<string>Midpoint</string>
+			<key>type</key>
+			<string>Point</string>
+			<key>name</key>
+			<string>midpoint</string>
+		</dict>
+		<dict>
+			<key>defaultSerialization</key>
+			<array>
+				<integer>1</integer>
+				<integer>1</integer>
+			</array>
+			<key>displayName</key>
+			<string>Change Rate</string>
+			<key>type</key>
+			<string>Point</string>
+			<key>name</key>
+			<string>barChangeRate</string>
+		</dict>
+		<dict>
+			<key>default</key>
+			<string>100</string>
+			<key>displayName</key>
+			<string>Percentage</string>
+			<key>type</key>
+			<string>Float</string>
+			<key>name</key>
+			<string>percentage</string>
 		</dict>
 	</array>
 </dict>
